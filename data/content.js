@@ -9,7 +9,6 @@ window.portfolioContent = {
         role: "Biotechnology Researcher",
         year: "2026",
         email: "vemurijesmitha1437@gmail.com",
-        phone: "+91 73311 89528",
         linkedin: "https://www.linkedin.com/in/jesmitha-vemuri"
     },
 
@@ -34,7 +33,8 @@ window.portfolioContent = {
         },
         technicalSkills: [
             "PCR", "Nanodrop", "RP-HPLC", "HCP analysis",
-            "EDX", "FT-IR", "Literature synthesis", "Data extraction",
+            "EDX", "FT-IR", "Biological nanoparticle biosynthesis",
+            "Systematic literature review", "Data extraction",
             "PW & WFI microbiology", "Growth Promotion Test", "Bacterial Endotoxin Test"
         ],
         education: [

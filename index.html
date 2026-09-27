@@ -1578,13 +1578,6 @@
                 </div>
             </div>
 
-            <div class="technical-skills gs-scroll-fade">
-                <div class="technical-skills-heading">
-                    <i class="ph ph-wrench"></i>
-                    <span class="font-mono text-[9px] uppercase tracking-[0.2em]">Technical skills</span>
-                </div>
-                <div id="technical-skills-list" class="technical-skills-list"></div>
-            </div>
         </div>
     </section>
 
@@ -1597,6 +1590,19 @@
                 <span id="research-section-meta" class="font-mono text-[9px] text-zinc-600 uppercase tracking-widest hidden md:block"></span>
             </div>
             <div id="research-grid" class="research-open-grid"></div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" class="py-14 px-6 md:px-12 lg:px-24 relative z-10 bg-transparent">
+        <div class="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-24">
+            <div class="technical-skills gs-scroll-fade">
+                <div class="technical-skills-heading">
+                    <i class="ph ph-wrench"></i>
+                    <span class="font-mono text-[9px] uppercase tracking-[0.2em]">Technical skills &amp; techniques</span>
+                </div>
+                <div id="technical-skills-list" class="technical-skills-list"></div>
+            </div>
         </div>
     </section>
 
@@ -1623,9 +1629,6 @@
             <div class="flex flex-wrap items-center justify-center gap-3">
                 <a id="footer-email" href="#" class="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-mono text-[10px] uppercase tracking-widest hover:bg-zinc-200 transition-transform duration-300 hover:scale-105 focus-ring shadow-[0_0_20px_rgba(255,255,255,0.1)]" data-cursor="contact">
                     <i class="ph-bold ph-envelope-simple text-sm"></i>
-                </a>
-                <a id="footer-phone" href="#" class="inline-flex items-center gap-3 border border-white/15 bg-white/[0.025] text-zinc-200 px-7 py-4 rounded-full font-mono text-[10px] uppercase tracking-widest hover:bg-white/[0.06] hover:border-white/25 transition-all duration-300 focus-ring" data-cursor="hover" aria-label="Call Vemuri Jesmitha">
-                    <i class="ph ph-phone text-sm"></i>
                 </a>
                 <button id="back-to-top" type="button" class="inline-flex items-center gap-3 border border-violet-300/25 bg-white/[0.025] text-violet-200 px-7 py-4 rounded-full font-mono text-[10px] uppercase tracking-widest hover:bg-violet-400/10 hover:border-violet-300/45 transition-all duration-300 focus-ring" data-cursor="hover" aria-label="Return to the beginning of the portfolio">
                     <i class="ph ph-arrow-up text-sm"></i> Back to beginning
@@ -1818,8 +1821,6 @@
             if (footerDescription) footerDescription.textContent = C.footer.description;
             const emailLink = document.getElementById("footer-email");
             if (emailLink) { emailLink.href = "mailto:" + C.site.email; emailLink.innerHTML = '<i class="ph-bold ph-envelope-simple text-sm"></i> ' + C.site.email; }
-            const phoneLink = document.getElementById("footer-phone");
-            if (phoneLink) { phoneLink.href = "tel:" + C.site.phone.replace(/\s/g, ""); phoneLink.innerHTML = '<i class="ph ph-phone text-sm"></i> ' + C.site.phone; }
             const copyright = document.getElementById("footer-copyright");
             if (copyright) copyright.textContent = C.footer.copyright;
             const footerLabel = document.getElementById("footer-label");
