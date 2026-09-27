@@ -856,6 +856,45 @@
             color:rgba(196,181,253,.78);
             letter-spacing:.18em;
         }
+
+        /* Technical Skills strip */
+        .technical-skills {
+            margin-top:34px;
+            padding-top:18px;
+            border-top:1px solid rgba(255,255,255,.08);
+        }
+        .technical-skills-heading {
+            display:flex;
+            align-items:center;
+            gap:9px;
+            margin-bottom:14px;
+            color:rgba(196,181,253,.82);
+        }
+        .technical-skills-heading i { font-size:1rem; color:rgba(196,181,253,.92); }
+        .technical-skills-list {
+            display:flex;
+            flex-wrap:wrap;
+            gap:7px;
+        }
+        .technical-skill {
+            display:inline-flex;
+            align-items:center;
+            min-height:28px;
+            padding:6px 10px;
+            border:1px solid rgba(196,181,253,.12);
+            background:rgba(139,92,246,.025);
+            color:rgba(212,212,216,.72);
+            font:500 8px/1 'JetBrains Mono',monospace;
+            letter-spacing:.09em;
+            text-transform:uppercase;
+            transition:border-color .25s ease,color .25s ease,background .25s ease;
+        }
+        .technical-skill:hover {
+            border-color:rgba(196,181,253,.32);
+            color:rgba(237,233,254,.95);
+            background:rgba(139,92,246,.07);
+        }
+
         .profile-academics { padding-top:4px; }
         .profile-academic-heading {
             display:flex;
@@ -1538,6 +1577,14 @@
                     </div>
                 </div>
             </div>
+
+            <div class="technical-skills gs-scroll-fade">
+                <div class="technical-skills-heading">
+                    <i class="ph ph-wrench"></i>
+                    <span class="font-mono text-[9px] uppercase tracking-[0.2em]">Technical skills</span>
+                </div>
+                <div id="technical-skills-list" class="technical-skills-list"></div>
+            </div>
         </div>
     </section>
 
@@ -1603,8 +1650,8 @@
             <div class="font-mono text-[9px] text-violet-400 uppercase tracking-[0.2em] mb-6 flex items-center gap-2" id="modal-meta">
                 <span class="w-2 h-[1px] bg-violet-400"></span> PROJ_01 // 2025
             </div>
-            <h2 class="font-editorial text-3xl md:text-4xl font-normal tracking-tight text-white mb-3" id="modal-title">UTI Antibiotic Resistance Trends</h2>
-            <div id="modal-subtitle" class="font-editorial italic text-base md:text-lg text-zinc-400 mb-7">Systematic literature review</div>
+            <h2 class="font-editorial text-3xl md:text-4xl font-normal tracking-tight text-white mb-3" id="modal-title">Gold Nanoparticles Biosynthesis</h2>
+            <div id="modal-subtitle" class="font-editorial italic text-base md:text-lg text-zinc-400 mb-7">Biosynthesis · Characterization</div>
             <div class="mb-8 h-px w-full bg-gradient-to-r from-violet-300/30 via-white/10 to-transparent"></div>
             
             <!-- Compact Methodology + Project Summary -->
@@ -1630,7 +1677,7 @@
                             <i class="ph ph-compass text-violet-300/65 text-lg"></i>
                         </div>
                         <h4 class="font-editorial text-2xl md:text-3xl text-white mb-3">Context</h4>
-                        <p class="font-editorial text-zinc-400 text-[13px] leading-relaxed" id="modal-context">Conducted a systematic literature review of antibiotic resistance patterns in urinary tract infections, drawing evidence from multiple studies across India.</p>
+                        <p class="font-editorial text-zinc-400 text-[13px] leading-relaxed" id="modal-context">Explored the biosynthesis of gold nanoparticles utilizing thermophilic Anoxybacillus sp., with an emphasis on an eco-friendly biological synthesis approach.</p>
                     </div>
 
                     <!-- 02 Methods -->
@@ -1640,7 +1687,7 @@
                             <i class="ph ph-test-tube text-violet-300/65 text-lg"></i>
                         </div>
                         <h4 class="font-editorial text-2xl md:text-3xl text-white mb-3">Methods</h4>
-                        <p class="font-editorial text-zinc-400 text-[13px] leading-relaxed" id="modal-methods">The work involved literature review and structured data extraction from published studies, followed by analysis of regional resistance patterns and associated clinical risk factors.</p>
+                        <p class="font-editorial text-zinc-400 text-[13px] leading-relaxed" id="modal-methods">The work followed biosynthesis of gold nanoparticles, followed by structural characterization using EDX and FT-IR. These techniques were used to examine the resulting nanoparticles before evaluating their application in dye degradation studies.</p>
                     </div>
 
                     <!-- 03 Outcome -->
@@ -1650,7 +1697,7 @@
                             <i class="ph ph-chart-line-up text-violet-300/65 text-lg"></i>
                         </div>
                         <h4 class="font-editorial text-2xl md:text-3xl text-white mb-3">Outcome</h4>
-                        <p class="font-editorial text-zinc-400 text-[13px] leading-relaxed" id="modal-outcome">The analysis was used to identify emerging resistance trends and synthesize the available evidence into a structured scientific review.</p>
+                        <p class="font-editorial text-zinc-400 text-[13px] leading-relaxed" id="modal-outcome">The project evaluated the application potential of the synthesized nanoparticles in environmental remediation through dye degradation studies.</p>
                     </div>
                 </div>
             </div>
@@ -1723,6 +1770,10 @@
             if (researchStat) researchStat.textContent = C.profile.stats.research;
             const exposureStat = document.getElementById("profile-stat-exposure");
             if (exposureStat) exposureStat.textContent = C.profile.stats.exposure;
+            const technicalSkills = document.getElementById("technical-skills-list");
+            if (technicalSkills) technicalSkills.innerHTML = C.profile.technicalSkills.map(function(skill) {
+                return '<span class="technical-skill">' + skill + '</span>';
+            }).join("");
 
             const education = document.getElementById("profile-education-list");
             if (education) education.innerHTML = C.profile.education.map(function(item) {

@@ -15,10 +15,10 @@ window.portfolioContent = {
 
     hero: {
         headline: [
-            { text: "Translating", style: "plain" },
-            { text: "molecular", style: "italic-muted" },
-            { text: "research to", style: "plain" },
-            { text: "industrial scale.", style: "violet" }
+            { text: "From", style: "plain" },
+            { text: "molecular research", style: "italic-muted" },
+            { text: "to practical", style: "plain" },
+            { text: "applications.", style: "violet" }
         ],
         description: "Biotechnology graduate and M.Tech scholar exploring molecular research, experimental science, and the translation of biological knowledge into practical applications.",
         academicSignal: "M.TECH BIOTECHNOLOGY · 2026"
@@ -32,6 +32,11 @@ window.portfolioContent = {
             research: "Research — 2 projects",
             exposure: "Professional exposure — 3 internships"
         },
+        technicalSkills: [
+            "PCR", "Nanodrop", "RP-HPLC", "HCP analysis",
+            "EDX", "FT-IR", "Literature synthesis", "Data extraction",
+            "PW & WFI microbiology", "Growth Promotion Test", "Bacterial Endotoxin Test"
+        ],
         education: [
             {
                 degree: "B.Tech Biotechnology",
@@ -40,7 +45,7 @@ window.portfolioContent = {
                 icon: "ph-graduation-cap",
                 iconClass: "text-zinc-400",
                 statusClass: "text-zinc-500",
-                detail: "CGPA 7.0 / 10",
+                detail: "Undergraduate study / completed",
                 detailClass: "text-violet-200",
                 current: false
             },
@@ -67,18 +72,6 @@ window.portfolioContent = {
     research: [
         {
             meta: "PROJ_01 // 2025",
-            title: "UTI Antibiotic Resistance Trends",
-            category: "Evidence synthesis",
-            kicker: "Systematic literature review",
-            institution: "Parul University",
-            icon: "ph-chart-line-up",
-            flow: ["Literature Review", "Data Extraction", "Regional Evidence", "Resistance Trends", "Risk Factors", "Scientific Reporting"],
-            context: "Conducted a systematic literature review of antibiotic resistance patterns in urinary tract infections, drawing evidence from multiple studies across India.",
-            methods: "The work involved literature review and structured data extraction from published studies, followed by analysis of regional resistance patterns and associated clinical risk factors.",
-            outcome: "The analysis was used to identify emerging resistance trends and synthesize the available evidence into a structured scientific review."
-        },
-        {
-            meta: "PROJ_02 // 2025",
             title: "Gold Nanoparticles Biosynthesis",
             category: "Bio-nanotechnology",
             kicker: "Biosynthesis · Characterization",
@@ -88,6 +81,18 @@ window.portfolioContent = {
             context: "Explored the biosynthesis of gold nanoparticles utilizing thermophilic Anoxybacillus sp., with an emphasis on an eco-friendly biological synthesis approach.",
             methods: "The work followed biosynthesis of gold nanoparticles, followed by structural characterization using EDX and FT-IR. These techniques were used to examine the resulting nanoparticles before evaluating their application in dye degradation studies.",
             outcome: "The project evaluated the application potential of the synthesized nanoparticles in environmental remediation through dye degradation studies."
+        },
+        {
+            meta: "PROJ_02 // 2025",
+            title: "UTI Antibiotic Resistance Trends",
+            category: "Evidence synthesis",
+            kicker: "Systematic literature review",
+            institution: "Parul University",
+            icon: "ph-chart-line-up",
+            flow: ["Literature Review", "Data Extraction", "Regional Evidence", "Resistance Trends", "Risk Factors", "Scientific Reporting"],
+            context: "Conducted a systematic literature review of antibiotic resistance patterns in urinary tract infections, drawing evidence from multiple studies across India.",
+            methods: "The work involved literature review and structured data extraction from published studies, followed by analysis of regional resistance patterns and associated clinical risk factors.",
+            outcome: "The analysis was used to identify emerging resistance trends and synthesize the available evidence into a structured scientific review."
         }
     ],
 
@@ -105,11 +110,11 @@ window.portfolioContent = {
             icon: "ph-dna",
             title: "CDMO Biologics Intern",
             organization: "Aurigene Pharmaceutical Services",
-            location: "Bollaram Road, Miyapur, Hyderabad · 500049",
+            location: "Hyderabad, Telangana",
             flow: ["Biologics development", "Downstream processing", "RP-HPLC", "HCP analysis"],
             context: "Observed biologics development and downstream processing workflows in a CDMO environment.",
             methods: "Gained exposure to analytical techniques including RP-HPLC and HCP analysis.",
-            outcome: "The internship provided observational exposure to biologics development, downstream processing, and analytical workflows."
+            outcome: "This exposure connected downstream processing with the analytical workflows used in biologics development."
         },
         {
             meta: "EXPOSURE_02 // MAY–JUN 2025",
@@ -117,12 +122,12 @@ window.portfolioContent = {
             index: "02 / Diagnostics",
             icon: "ph-test-tube",
             title: "Molecular Diagnostics Intern",
-            organization: "KIMS Hospital, Hyderabad",
-            location: "1-8-31/1, Minister Rd, Begumpet, Secunderabad · 500003",
+            organization: "KIMS Hospital",
+            location: "Hyderabad, Telangana",
             flow: ["Molecular diagnostics", "Biosafety practices", "PCR", "Nanodrop", "Sample processing"],
             context: "Observed molecular diagnostic workflows and biosafety practices in a hospital setting.",
             methods: "Gained exposure to PCR, Nanodrop, and sample-processing techniques, with an understanding of nucleic-acid-based testing.",
-            outcome: "The internship provided observational exposure to molecular diagnostics and nucleic-acid-based testing workflows."
+            outcome: "The placement provided a view of how nucleic-acid testing fits into hospital diagnostic workflows."
         },
         {
             meta: "EXPOSURE_03 // JAN–APR 2026",
@@ -131,11 +136,11 @@ window.portfolioContent = {
             icon: "ph-microscope",
             title: "Quality Control Microbiology Intern",
             organization: "Dr. Reddy's Formulations Ltd.",
-            location: "DFL-2, Survey No. Part of (32 to 39), APIC Industrial Park, Pydibhimavaram (V), Ranastalam (M), Srikakulam District · 532409, Andhra Pradesh",
+            location: "Srikakulam, Andhra Pradesh",
             flow: ["Pharmaceutical water systems", "PW & WFI microbiology", "Growth Promotion Test", "Bacterial Endotoxin Test", "QC practices"],
             context: "Observed microbiological testing of pharmaceutical water systems, including Purified Water (PW) and Water for Injection (WFI).",
             methods: "Gained exposure to Growth Promotion Test (GPT) and developed a basic understanding of Bacterial Endotoxin Test (BET) and related QC practices.",
-            outcome: "The internship provided observational exposure to pharmaceutical microbiology and the quality-control environment."
+            outcome: "This experience showed how microbiological testing supports pharmaceutical water-system quality control."
         }
     ],
 
