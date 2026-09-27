@@ -34,10 +34,12 @@ window.portfolioContent = {
         technicalSkills: {
             applied: [
                 "Biological nanoparticle biosynthesis",
-                "EDX",
-                "FT-IR",
                 "Systematic literature review",
                 "Data extraction"
+            ],
+            characterization: [
+                "EDX",
+                "FT-IR"
             ],
             observational: [
                 "PCR",

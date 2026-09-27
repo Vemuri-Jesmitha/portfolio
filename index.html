@@ -1626,6 +1626,13 @@
                     </div>
                     <div id="technical-skills-applied" class="technical-skills-list"></div>
                 </div>
+                <div class="technical-skills-group">
+                    <div class="technical-skills-heading">
+                        <i class="ph ph-chart-line"></i>
+                        <span class="font-mono text-[9px] uppercase tracking-[0.2em]">Characterization through project work</span>
+                    </div>
+                    <div id="technical-skills-characterization" class="technical-skills-list"></div>
+                </div>
                 <div class="technical-skills-group technical-skills-group-observed">
                     <div class="technical-skills-heading">
                         <i class="ph ph-eye"></i>
@@ -1814,6 +1821,10 @@
             const technicalSkillsApplied = document.getElementById("technical-skills-applied");
             if (technicalSkillsApplied) technicalSkillsApplied.innerHTML = C.profile.technicalSkills.applied.map(function(skill) {
                 return '<span class="technical-skill">' + skill + '</span>';
+            }).join("");
+            const technicalSkillsCharacterization = document.getElementById("technical-skills-characterization");
+            if (technicalSkillsCharacterization) technicalSkillsCharacterization.innerHTML = C.profile.technicalSkills.characterization.map(function(skill) {
+                return '<span class="technical-skill technical-skill-characterization">' + skill + '</span>';
             }).join("");
             const technicalSkillsObservational = document.getElementById("technical-skills-observational");
             if (technicalSkillsObservational) technicalSkillsObservational.innerHTML = C.profile.technicalSkills.observational.map(function(skill) {
