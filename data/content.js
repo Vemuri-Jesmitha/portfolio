@@ -10,7 +10,6 @@ window.portfolioContent = {
         year: "2026",
         email: "vemurijesmitha1437@gmail.com",
         phone: "+91 73311 89528",
-        github: "https://github.com/Vemuri-Jesmitha",
         linkedin: "https://www.linkedin.com/in/jesmitha-vemuri"
     },
 
