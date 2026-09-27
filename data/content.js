@@ -69,6 +69,12 @@ window.portfolioContent = {
         meta: "Selected work / 2025"
     },
 
+    technicalSkillsSection: {
+        sectionLabel: "03 / TECHNICAL SKILLS",
+        title: "Techniques across research and practice.",
+        meta: "Methods / Selected toolkit"
+    },
+
     research: [
         {
             meta: "PROJ_01 // 2025",
@@ -97,7 +103,7 @@ window.portfolioContent = {
     ],
 
     experienceSection: {
-        sectionLabel: "03 / PROFESSIONAL EXPOSURE",
+        sectionLabel: "04 / PROFESSIONAL EXPOSURE",
         title: "Biotechnology in practice.",
         meta: "Internships / 2024–2026"
     },

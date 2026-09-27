@@ -1445,7 +1445,8 @@
 
             <a href="#about" class="nav-item px-4 py-2 rounded-full font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-400 focus-ring" data-section="about" data-cursor="hover">01 / Profile</a>
             <a href="#research" class="nav-item px-4 py-2 rounded-full font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-400 focus-ring" data-section="research" data-cursor="hover">02 / Research</a>
-            <a href="#experience" class="nav-item px-4 py-2 rounded-full font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-400 focus-ring" data-section="experience" data-cursor="hover">03 / Professional Exposure</a>
+            <a href="#skills" class="nav-item px-4 py-2 rounded-full font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-400 focus-ring" data-section="skills" data-cursor="hover">03 / Technical Skills</a>
+            <a href="#experience" class="nav-item px-4 py-2 rounded-full font-mono text-[9px] uppercase tracking-[0.18em] text-zinc-400 focus-ring" data-section="experience" data-cursor="hover">04 / Professional Exposure</a>
 
             <div class="w-px h-4 bg-white/10 mx-1.5"></div>
 
@@ -1593,9 +1594,20 @@
         </div>
     </section>
 
-    <!-- TECHNICAL SKILLS -->
-    <section id="skills" class="min-h-[42svh] py-12 px-6 md:px-12 lg:px-24 relative z-10 bg-transparent section-marker flex items-center">
+    <!-- SECTION 03: TECHNICAL SKILLS -->
+    <section id="skills" class="min-h-[100svh] py-24 px-6 md:px-12 lg:px-24 relative z-10 bg-transparent section-marker flex items-center">
+        <div class="absolute top-0 left-0 right-0 h-px bg-white/5"></div>
         <div class="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-24">
+            <div class="flex items-end justify-between mb-10 gs-scroll-fade text-protection">
+                <div>
+                    <div class="flex items-center gap-2 font-mono text-[9px] text-violet-400 uppercase tracking-[0.2em] mb-4">
+                        <span class="w-2 h-[1px] bg-violet-400"></span>
+                        <span id="skills-section-label"></span>
+                    </div>
+                    <h2 id="skills-section-title" class="font-editorial text-4xl md:text-5xl text-white tracking-tight"></h2>
+                </div>
+                <span id="skills-section-meta" class="font-mono text-[9px] text-zinc-600 uppercase tracking-widest hidden md:block"></span>
+            </div>
             <div class="technical-skills gs-scroll-fade">
                 <div class="technical-skills-heading">
                     <i class="ph ph-wrench"></i>
@@ -1759,6 +1771,13 @@
             if (researchSectionTitle) researchSectionTitle.textContent = C.researchSection.title;
             const researchSectionMeta = document.getElementById("research-section-meta");
             if (researchSectionMeta) researchSectionMeta.textContent = C.researchSection.meta;
+
+            const skillsSectionLabel = document.getElementById("skills-section-label");
+            if (skillsSectionLabel) skillsSectionLabel.textContent = C.technicalSkillsSection.sectionLabel;
+            const skillsSectionTitle = document.getElementById("skills-section-title");
+            if (skillsSectionTitle) skillsSectionTitle.textContent = C.technicalSkillsSection.title;
+            const skillsSectionMeta = document.getElementById("skills-section-meta");
+            if (skillsSectionMeta) skillsSectionMeta.textContent = C.technicalSkillsSection.meta;
 
             const experienceSectionLabel = document.getElementById("experience-section-label");
             if (experienceSectionLabel) experienceSectionLabel.textContent = C.experienceSection.sectionLabel;
