@@ -1755,12 +1755,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
 
-    <script src="data/content.js"></script>
+    <script src="data/content.js?v=20260928"></script>
     <script>
         const content = window.portfolioContent;
 
         function renderPortfolioContent() {
             const C = content;
+            const skillsSection = C.technicalSkillsSection || {
+                sectionLabel: "03 / TECHNICAL SKILLS",
+                title: "Techniques across research and practice.",
+                meta: "Methods / Selected toolkit"
+            };
+            const rawTechnicalSkills = C.profile.technicalSkills || [];
+            const technicalSkills = Array.isArray(rawTechnicalSkills)
+                ? { applied: rawTechnicalSkills, characterization: [], observational: [] }
+                : rawTechnicalSkills;
 
             document.title = C.seo.title;
             const descriptionMeta = document.querySelector('meta[name="description"]');
@@ -1799,11 +1808,11 @@
             if (researchSectionMeta) researchSectionMeta.textContent = C.researchSection.meta;
 
             const skillsSectionLabel = document.getElementById("skills-section-label");
-            if (skillsSectionLabel) skillsSectionLabel.textContent = C.technicalSkillsSection.sectionLabel;
+            if (skillsSectionLabel) skillsSectionLabel.textContent = skillsSection.sectionLabel;
             const skillsSectionTitle = document.getElementById("skills-section-title");
-            if (skillsSectionTitle) skillsSectionTitle.textContent = C.technicalSkillsSection.title;
+            if (skillsSectionTitle) skillsSectionTitle.textContent = skillsSection.title;
             const skillsSectionMeta = document.getElementById("skills-section-meta");
-            if (skillsSectionMeta) skillsSectionMeta.textContent = C.technicalSkillsSection.meta;
+            if (skillsSectionMeta) skillsSectionMeta.textContent = skillsSection.meta;
 
             const experienceSectionLabel = document.getElementById("experience-section-label");
             if (experienceSectionLabel) experienceSectionLabel.textContent = C.experienceSection.sectionLabel;
@@ -1819,15 +1828,15 @@
             const exposureStat = document.getElementById("profile-stat-exposure");
             if (exposureStat) exposureStat.textContent = C.profile.stats.exposure;
             const technicalSkillsApplied = document.getElementById("technical-skills-applied");
-            if (technicalSkillsApplied) technicalSkillsApplied.innerHTML = C.profile.technicalSkills.applied.map(function(skill) {
+            if (technicalSkillsApplied) technicalSkillsApplied.innerHTML = technicalSkills.applied || [].map(function(skill) {
                 return '<span class="technical-skill">' + skill + '</span>';
             }).join("");
             const technicalSkillsCharacterization = document.getElementById("technical-skills-characterization");
-            if (technicalSkillsCharacterization) technicalSkillsCharacterization.innerHTML = C.profile.technicalSkills.characterization.map(function(skill) {
+            if (technicalSkillsCharacterization) technicalSkillsCharacterization.innerHTML = technicalSkills.characterization || [].map(function(skill) {
                 return '<span class="technical-skill technical-skill-characterization">' + skill + '</span>';
             }).join("");
             const technicalSkillsObservational = document.getElementById("technical-skills-observational");
-            if (technicalSkillsObservational) technicalSkillsObservational.innerHTML = C.profile.technicalSkills.observational.map(function(skill) {
+            if (technicalSkillsObservational) technicalSkillsObservational.innerHTML = technicalSkills.observational || [].map(function(skill) {
                 return '<span class="technical-skill technical-skill-observed">' + skill + '</span>';
             }).join("");
 
