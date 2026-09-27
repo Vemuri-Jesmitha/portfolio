@@ -31,12 +31,24 @@ window.portfolioContent = {
             research: "Research — 2 projects",
             exposure: "Professional exposure — 3 internships"
         },
-        technicalSkills: [
-            "PCR", "Nanodrop", "RP-HPLC", "HCP analysis",
-            "EDX", "FT-IR", "Biological nanoparticle biosynthesis",
-            "Systematic literature review", "Data extraction",
-            "PW & WFI microbiology", "Growth Promotion Test", "Bacterial Endotoxin Test"
-        ],
+        technicalSkills: {
+            applied: [
+                "Biological nanoparticle biosynthesis",
+                "EDX",
+                "FT-IR",
+                "Systematic literature review",
+                "Data extraction"
+            ],
+            observational: [
+                "PCR",
+                "Nanodrop",
+                "RP-HPLC",
+                "HCP analysis",
+                "PW & WFI microbiology",
+                "Growth Promotion Test",
+                "Bacterial Endotoxin Test"
+            ]
+        },
         education: [
             {
                 degree: "B.Tech Biotechnology",

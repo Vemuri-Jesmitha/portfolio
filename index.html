@@ -894,6 +894,16 @@
             color:rgba(237,233,254,.95);
             background:rgba(139,92,246,.07);
         }
+        .technical-skills-group + .technical-skills-group {
+            margin-top:24px;
+            padding-top:20px;
+            border-top:1px solid rgba(255,255,255,.06);
+        }
+        .technical-skill-observed {
+            border-style:dashed;
+            color:rgba(161,161,170,.58);
+            background:rgba(255,255,255,.012);
+        }
 
         .profile-academics { padding-top:4px; }
         .profile-academic-heading {
@@ -1609,11 +1619,20 @@
                 <span id="skills-section-meta" class="font-mono text-[9px] text-zinc-600 uppercase tracking-widest hidden md:block"></span>
             </div>
             <div class="technical-skills gs-scroll-fade">
-                <div class="technical-skills-heading">
-                    <i class="ph ph-wrench"></i>
-                    <span class="font-mono text-[9px] uppercase tracking-[0.2em]">Technical skills &amp; techniques</span>
+                <div class="technical-skills-group">
+                    <div class="technical-skills-heading">
+                        <i class="ph ph-hand-waving"></i>
+                        <span class="font-mono text-[9px] uppercase tracking-[0.2em]">Applied in projects</span>
+                    </div>
+                    <div id="technical-skills-applied" class="technical-skills-list"></div>
                 </div>
-                <div id="technical-skills-list" class="technical-skills-list"></div>
+                <div class="technical-skills-group technical-skills-group-observed">
+                    <div class="technical-skills-heading">
+                        <i class="ph ph-eye"></i>
+                        <span class="font-mono text-[9px] uppercase tracking-[0.2em]">Observational exposure</span>
+                    </div>
+                    <div id="technical-skills-observational" class="technical-skills-list"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -1792,9 +1811,13 @@
             if (researchStat) researchStat.textContent = C.profile.stats.research;
             const exposureStat = document.getElementById("profile-stat-exposure");
             if (exposureStat) exposureStat.textContent = C.profile.stats.exposure;
-            const technicalSkills = document.getElementById("technical-skills-list");
-            if (technicalSkills) technicalSkills.innerHTML = C.profile.technicalSkills.map(function(skill) {
+            const technicalSkillsApplied = document.getElementById("technical-skills-applied");
+            if (technicalSkillsApplied) technicalSkillsApplied.innerHTML = C.profile.technicalSkills.applied.map(function(skill) {
                 return '<span class="technical-skill">' + skill + '</span>';
+            }).join("");
+            const technicalSkillsObservational = document.getElementById("technical-skills-observational");
+            if (technicalSkillsObservational) technicalSkillsObservational.innerHTML = C.profile.technicalSkills.observational.map(function(skill) {
+                return '<span class="technical-skill technical-skill-observed">' + skill + '</span>';
             }).join("");
 
             const education = document.getElementById("profile-education-list");
