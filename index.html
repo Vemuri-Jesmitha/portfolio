@@ -1828,15 +1828,15 @@
             const exposureStat = document.getElementById("profile-stat-exposure");
             if (exposureStat) exposureStat.textContent = C.profile.stats.exposure;
             const technicalSkillsApplied = document.getElementById("technical-skills-applied");
-            if (technicalSkillsApplied) technicalSkillsApplied.innerHTML = technicalSkills.applied || [].map(function(skill) {
+            if (technicalSkillsApplied) technicalSkillsApplied.innerHTML = (technicalSkills.applied || []).map(function(skill) {
                 return '<span class="technical-skill">' + skill + '</span>';
             }).join("");
             const technicalSkillsCharacterization = document.getElementById("technical-skills-characterization");
-            if (technicalSkillsCharacterization) technicalSkillsCharacterization.innerHTML = technicalSkills.characterization || [].map(function(skill) {
+            if (technicalSkillsCharacterization) technicalSkillsCharacterization.innerHTML = (technicalSkills.characterization || []).map(function(skill) {
                 return '<span class="technical-skill technical-skill-characterization">' + skill + '</span>';
             }).join("");
             const technicalSkillsObservational = document.getElementById("technical-skills-observational");
-            if (technicalSkillsObservational) technicalSkillsObservational.innerHTML = technicalSkills.observational || [].map(function(skill) {
+            if (technicalSkillsObservational) technicalSkillsObservational.innerHTML = (technicalSkills.observational || []).map(function(skill) {
                 return '<span class="technical-skill technical-skill-observed">' + skill + '</span>';
             }).join("");
 
