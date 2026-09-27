@@ -1,0 +1,43 @@
+/* =========================================================
+   SCIENCE BACKGROUND
+   Global canvas layer + fixed interface layers
+   ========================================================= */
+
+#global-science-field {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Keep the cinematic noise above the page content */
+.noise {
+    z-index: 9999 !important;
+}
+
+/* Custom cursor */
+#cursor-container {
+    z-index: 10000 !important;
+}
+
+/* Project / experience detail modal */
+#project-modal {
+    z-index: 10001 !important;
+}
+
+/* Reduced-motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    #global-science-field {
+        opacity: 0.75;
+    }
+}
